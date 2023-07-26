@@ -1,0 +1,87 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.menubar{
+    background: rgb(199, 179, 238);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    padding: 0 5%;
+    position: relative;
+}
+label.logo img {
+    color: aliceblue;
+    width: 60px;
+    height: 60px;
+    padding: 4px 0px;
+    margin: 7px 0px;
+    border-radius: 100%;
+}
+.menubar ul {
+    display: flex;
+    list-style: none;
+}
+.menubar ul li {
+    padding: 10px 30px;
+    position: relative;
+}
+.menubar ul li a {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 7px 13px;
+    transition: all 0.3s;
+}
+.menubar ul li a:hover {
+    background: aliceblue;
+    color: blueviolet;
+    border-radius: 25px;
+    transition: .5sec;
+}
+.fas{
+    float: right;
+    margin-left: 10px;
+    padding-top: 3px;
+}
+.dropdownmenu{
+    display: none;
+}
+.menubar ul li:hover .dropdownmenu{
+    display: block;
+    position: absolute;
+    left:0;
+    top:100%;
+    background-color: black;
+
+}
+.menubar ul li:hover .dropdownmenu ul{
+    display: block;
+    margin :10px;
+}
+.menubar ul li:hover .dropdownmenu ul li{
+    width: 150px;
+    padding: 10px;
+}
+
+.dropdownmenu-1{
+    display: none;
+}
+.dropdownmenu ul li:hover .dropdownmenu-1{
+    display: block;
+    position: absolute;
+    top:0;
+    left:150px;
+    background-color: black;
+}
+.sec{
+    height: calc(100vh - 80px);
+    background: url(img/photo-1595438337199-d50ba5072c7e.webp)no-repeat center center/cover;
+}

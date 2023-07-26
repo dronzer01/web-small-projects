@@ -1,0 +1,101 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header{
+    background-color: rgb(255, 146, 222);
+}
+li{
+    list-style: none;
+}
+a{
+    color: aliceblue;
+    text-decoration: none;
+}
+.navbar{
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+.nav-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+label.logo img {
+    color: aliceblue;
+    width: 60px;
+    height: 60px;
+    padding: 4px 0px;
+    margin: 7px 12px;
+    border-radius: 100%;
+}
+.nav-link{
+    transition: 0.67s ease;
+    color: aliceblue;
+    font-size: 17px;
+    text-transform: uppercase;
+    padding: 7px 13px;
+}
+.nav-link:hover{
+    background: aliceblue;
+    color: blueviolet;
+    border-radius: 25px;
+}
+
+.hamburger{
+    display:none;
+    cursor: pointer;
+}
+.bar{
+    display: block;
+    width:25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3sec ease-in-out;
+    transition:  all 0.3sec ease-in-out ;
+    background-color: aliceblue;
+}
+@media (max-width:960px) {
+    .hamburger {
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform:translateY(8px)rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform:translateY(-8px)rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top:70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: black;
+        width: 100%;
+        text-align: center;
+        transition: 0.3sec;
+    }
+    .nav-item{
+        margin: 16px 0;
+    }
+    .nav-menu.active{
+        left: 0;
+    }
+
+}
+section {
+    background: url(img/allef-vinicius-iNOgTXeT3OM-unsplash.jpg) no-repeat center center/cover;
+    height: calc(100vh - 80px);
+}
