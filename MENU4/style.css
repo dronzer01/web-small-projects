@@ -1,0 +1,181 @@
+/* BASIC UTILITIES  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: calc(100vh - 80px);
+    background: url(img/city-lights-through-rain-window.jpg)no-repeat center center/cover;
+}
+
+li {
+    list-style: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: tomato;
+    height: 80px;
+    width: 100%;
+    position: relative;
+    padding: 0 5%;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    padding: 4px 0;
+}
+
+.hamburger {
+    font-size: 25px;
+    color: white;
+    padding: 7px 13px;
+
+}
+
+.navlinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu li {
+    padding: 10px 30px;
+    position: relative;
+}
+
+.menu input[type=text] {
+    padding: 6px;
+    border: none;
+    font-size: 17px;
+    border-radius: 25px;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: 0.7s;
+    padding: 6px 6px;
+}
+
+.menu li a:hover {
+    color: tomato;
+    background-color: aliceblue;
+    border-radius: 25px;
+    transition: 0.7s;
+}
+
+.dropdown {
+    display: none;
+}
+
+.menu li:hover .dropdown {
+    display: block;
+    position: absolute;
+    left: 0%;
+    top: 100%;
+    background-color: tomato;
+}
+
+.menu li:hover .dropdown ul {
+    margin: 10px;
+    display: block;
+}
+
+.menu li:hover .dropdown ul li {
+    width: 150px;
+    padding: 10px;
+}
+
+.dropdown1 {
+    display: none;
+    list-style: none;
+}
+
+.dropdown ul li:hover div.dropdown1 {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 150px;
+    background-color: tomato;
+}
+
+/* RESPONSIVE  */
+input[type=checkbox] {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    user-select: none;
+}
+
+@media(max-width:1059px) {
+    input[type=checkbox]:checked~.menu {
+        display: block;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        background-color: cornflowerblue;
+        right: 0;
+        left: 0;
+        top: 80px;
+        text-align: center;
+        padding: 16px 0;
+    }
+
+    .menu li:hover {
+        display: inline-block;
+        background-color: aliceblue;
+        color: red;
+        transition: 0.7s ease;
+        border-radius: 25px;
+    }
+
+    .menu li+ li {
+        margin-top: 20px;
+    }
+
+    .dropdown {
+        left: 50%;
+        top: 20px;
+        transform: translateX(70%);
+    }
+
+    .dropdown li:hover {
+        background-color: aliceblue;
+        color: red;
+        border-radius: 25px;
+    }
+
+    .dropdown ul li:hover div.dropdown1 {
+        display: block;
+        position: absolute;
+        top: 50px;
+        left: 150px;
+        background-color: tomato;
+    }
+}
