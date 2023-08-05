@@ -1,0 +1,44 @@
+body{
+    background: linear-gradient(rgba(8, 12, 245, 0.911),rgba(39, 9, 44,067))no-repeat center center/cover;
+}
+.container{
+    width: 360px;
+    padding: 33px;
+    text-align: center;
+    background-color: aliceblue;
+    margin-left: 33%;
+    margin-top: 5px;
+}
+input{
+    width: 270px;
+    padding: 8px;
+    border: 2px solid gainsboro;
+    outline: none;
+    border-radius: 25px;
+    font-size: 19px;
+}
+button{
+    width: 60px;
+    height: 41px;
+    background: linear-gradient(rgba(211, 211, 211, 0.911),rgba(39, 9, 44,067));
+    color: aliceblue;
+    border-radius: 20px;
+    font-size: 19px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.text ul{
+    position: relative;
+    background:linear-gradient(rgba(183, 246, 253, 0.911),rgba(211, 51, 255,067));
+    color: aliceblue;
+    font-size: 19px;
+    text-align: left;
+    padding: 7px;
+    border-radius: 20px;
+}
+.text ul i{
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
