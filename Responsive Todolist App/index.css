@@ -9,6 +9,24 @@ body{
     height: 100%;
     background:url(img/chimene-gaspar-VQnKZ6S0p3k-unsplash.jpg)no-repeat center center/cover;
 }
+/* For Scroll bar  */
+/* width  */
+::-webkit-scrollbar{
+    width: 6px;
+}
+/* track  */
+::-webkit-scrollbar-track{
+    background: rgb(208, 202, 202);
+}
+/* handle  */
+::-webkit-scrollbar-thumb{
+    border-radius: 8px;
+    background: grey;
+}
+/* on hover  */
+::-webkit-scrollbar-thumb:hover{
+    background: rgb(43, 37, 37);
+}
 .container{
     position: relative;
     max-width: 480px;
@@ -79,6 +97,7 @@ textarea::-webkit-scrollbar{
     padding: 5px;
     color: rgb(50, 42, 42);
     display: none;
+    opacity: 0.6;
 }
 .list input:checked ~ .task{
     text-decoration: line-through;
@@ -94,7 +113,7 @@ textarea::-webkit-scrollbar{
     height: 16px;
     width: 16px;
     accent-color: yellow;
-    /* pointer-events: none; */
+    pointer-events: none;
 }
 .todolists .list i:hover{
     opacity: 1;
