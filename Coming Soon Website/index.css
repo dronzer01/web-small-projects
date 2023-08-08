@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.container .image {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.container header {
+    font-size: 60px;
+    font-weight: 600;
+    /* To give gradient color to header  */
+    background: -webkit-linear-gradient(rgba(220, 15, 239, 0.93), rgba(13, 96, 239, 0.885));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+.container p{
+    font-size: 20px;
+    font-weight: 400;
+    background: -webkit-linear-gradient( rgb(243, 5, 235), rgb(6, 226, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+.container .time-content{
+    display: flex;
+    column-gap: 30px;
+    align-items: center;
+}
+.time-content .time{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.time .number,
+.time .text{
+    color: brown;
+}
+.time .number{
+    font-size: 40px;
+}
+.time .text{
+    font-size: 20px;
+    text-transform: capitalize;
+}
+.email-content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+    width: 100%;
+}
+.email-content p{
+    font-size: 23px;
+}
+.input-box{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    height:40px;
+    max-width: 360px;
+    width: 100%;
+    margin-top: 25px;
+}
+.input-box input,
+.input-box button{
+    height: 100%;
+    background-color: rgba(255,255,255,0.2);
+    outline: none;
+    border:2px solid;
+    border-image: linear-gradient(45deg, rgba(237, 10, 237,0.4), rgba(132, 9, 9,.6)) .8;
+    font-weight: 500;
+}
+.input-box input{
+    width: 100%;
+    padding: 0 15px;
+    color: black;
+}
+input::placeholder{
+    color: brown;
+}
+.input-box button{
+    cursor: pointer;
+    color: brown;
+    white-space: nowrap;
+    padding: 0 20px;
+    transition:  all 0.3s ease;
+}
+.input-box button:hover{
+    color:black ;
+    background:linear-gradient(rgba(224, 215, 215,0.6),rgba(70, 43, 43, 0.912));
+}
