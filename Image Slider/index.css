@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(175, 239, 255,0.5),rgba(255, 0, 170,0.4),rgba(155, 0, 155,0.67),rgba(50, 2, 240,0.6));
+}
+.wrapper{
+    max-width: 650px;
+    width: 100%;
+    height: 400px;
+    background:linear-gradient(rgba(233, 232, 232, 0.986),rgba(1, 103, 106, 0.937),rgb(0, 0, 0));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.9);
+}
+.wrapper i.button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    height: 36px;
+    width:36px;
+    background:linear-gradient(rgb(238, 238, 255),purple);
+    border-radius: 100%;
+    text-align: center;
+    line-height: 36px;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    transition : all 0.3s linear;
+    cursor: pointer;
+    z-index: 100;
+}
+i.button:active{
+    transform: scale(0.94) translateY(-50%);
+}
+i#previous{
+    left: 25px;
+}
+i#next{
+    right: 25px;
+}
+.img-container{
+    height: 320px;
+    max-width: 320px;
+    width: 100%;
+    overflow: hidden;
+}
+.img-container .carousal{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    transition: all 0.4s ease;
+}
+.carousal img{
+    height: 100%;
+    width: 100%;
+    border: 10px solid aliceblue;
+    object-fit: cover;
+    border-radius: 20px;
+}
