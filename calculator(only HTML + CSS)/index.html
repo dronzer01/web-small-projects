@@ -47,10 +47,9 @@
                 <input type="button" value="0" onclick="forms.answer.value += '0'">
                 <input type="button" value="00" onclick="forms.answer.value += '00'">
                 <input type="button" value="." onclick="forms.answer.value += '.'">
-                <input type="button" value="=">
+                <input type="button" value="=" onclick="forms.answer.value=eval(forms.answer.value)" class="equal">
             </div>
         </form>
     </div>
-    <script src="index.js"></script>
 </body>
 </html>
